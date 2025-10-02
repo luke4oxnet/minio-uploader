@@ -2,7 +2,7 @@
 FROM alpine:latest
 
 # Install curl, ca-certificates and remove cache to keep image small
-RUN apk add --no-cache curl ca-certificates \
+RUN apk add --no-cache bash curl ca-certificates \
   && update-ca-certificates
 
 # Download MinIO Client (mc) and make it executable
